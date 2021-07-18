@@ -6,11 +6,27 @@ export const Container = styled.View`
 `;
 
 export const Main = styled.View`
-  margin-top: 192px;
+  margin-top: 160px;
+`;
+
+export const ProfilePhotoContainer = styled.TouchableOpacity`
+  background-color: #e1e2e6;
+  width: 80px;
+  height: 80px;
+  border-radius: 40px;
+  align-self: center;
+  margin-top: 16px;
+  overflow: hidden;
+`;
+
+export const DefaultProfilePhoto = styled.View`
+  flex: 1;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const Auth = styled.View`
-  margin: 64px 32px 32px; 
+  margin: 24px 32px 32px; 
 `;
 
 export const AuthContainer = styled.View`

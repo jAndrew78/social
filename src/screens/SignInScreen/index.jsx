@@ -50,8 +50,7 @@ export default SignInScreen = ({navigation}) => {
           <AuthField  
             autoCapitalize="none" 
             autoCompleteType="password" 
-            autoCorrect={false} 
-            autoFocus={false}
+            autoCorrect={false}
             secureTextEntry={true}
             onChangeText={password => setPassword(password.trim())}
             value={password}

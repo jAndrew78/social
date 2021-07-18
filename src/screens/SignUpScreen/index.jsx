@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
+import { AntDesign } from '@expo/vector-icons';
 import { 
   Container,
   Main,
+  ProfilePhotoContainer,
+  DefaultProfilePhoto,
   Auth,
   AuthContainer,
   AuthTitle,
@@ -27,9 +30,15 @@ export default SignUpScreen = ({navigation}) => {
       
       <Main>
         <Text center title semi>
-          Come and join us
+          Come join us
         </Text>
       </Main>
+
+      <ProfilePhotoContainer>
+        <DefaultProfilePhoto>
+          <AntDesign name="plus" size={24} color="#fff" />
+        </DefaultProfilePhoto>
+      </ProfilePhotoContainer>
 
       <Auth>
 
@@ -49,8 +58,7 @@ export default SignUpScreen = ({navigation}) => {
           <AuthField 
             autoCapitalize="none" 
             autoCompleteType="email" 
-            autoCorrect={false} 
-            autoFocus={false}
+            autoCorrect={false}
             keyboardType="email-address"
             onChangeText={email => setEmail(email.trim())}
             value={email}
@@ -62,8 +70,7 @@ export default SignUpScreen = ({navigation}) => {
           <AuthField  
             autoCapitalize="none" 
             autoCompleteType="password" 
-            autoCorrect={false} 
-            autoFocus={false}
+            autoCorrect={false}
             secureTextEntry={true}
             onChangeText={password => setPassword(password.trim())}
             value={password}
