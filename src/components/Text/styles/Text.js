@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Text = styled.Text`
-  color: ${props => props.color ?? "414959"};
+  color: ${props => props.color ?? "#414959"};
   margin: ${props => props.margin ?? 0};
   padding: ${props => props.padding ?? 0};
 
@@ -55,7 +55,7 @@ export const Text = styled.Text`
         return `text-align: right;`
       
       default: 
-        return `text-align: ;`
+        return `text-align: left;`
     }
   }}
 `;
