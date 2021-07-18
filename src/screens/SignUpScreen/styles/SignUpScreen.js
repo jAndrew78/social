@@ -11,6 +11,7 @@ export const Main = styled.View`
 
 export const ProfilePhotoContainer = styled.TouchableOpacity`
   background-color: #e1e2e6;
+  border: 1px solid #fff;
   width: 80px;
   height: 80px;
   border-radius: 40px;
@@ -20,6 +21,12 @@ export const ProfilePhotoContainer = styled.TouchableOpacity`
 `;
 
 export const DefaultProfilePhoto = styled.View`
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const ProfilePhoto = styled.Image`
   flex: 1;
   align-items: center;
   justify-content: center;
