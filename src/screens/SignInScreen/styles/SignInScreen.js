@@ -6,23 +6,41 @@ export const Container = styled.View`
 `;
 
 export const Main = styled.View`
-  margin-top: 45%;
+  margin-top: 192px;
 `;
 
 export const Auth = styled.View`
-  
+  margin: 32px; 
 `;
 
 export const AuthContainer = styled.View`
-  
+  margin-bottom: 32px;
 `;
 
 export const AuthTitle = styled(Text)`
-  
+  color: #333;
+  text-transform: uppercase;
+  margin-top: 32px;
 `;
 
 export const AuthField = styled.TextInput`
-  
+  border-bottom-color: #333;
+  border-bottom-width: .5px;
+  height: 48px;
+  font-size: 24px;
+`;
+
+export const SignInContainer = styled.TouchableOpacity`
+  margin: 0 32px;
+  height: 48px;
+  align-items: center;
+  justify-content: center;
+  background-color: #919dc2;
+  border-radius: 10px;
+`;
+
+export const SignUp = styled.TouchableOpacity`
+  margin-top: 16px;
 `;
 
 export const Background = styled.ImageBackground`

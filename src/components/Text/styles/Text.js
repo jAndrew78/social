@@ -58,4 +58,20 @@ export const Text = styled.Text`
         return `text-align: left;`
     }
   }}
+
+  ${({ white, lilac, violet }) => {
+    switch (true) {
+      case white:
+        return `color: #fff`
+      
+      case lilac:
+        return `color: #919dc2`
+
+      case violet:
+        return `color: #856088`
+
+      default:
+        return `color: #111`
+    }
+  }}
 `;
