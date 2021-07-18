@@ -10,7 +10,7 @@ export const Main = styled.View`
 `;
 
 export const Auth = styled.View`
-  margin: 32px; 
+  margin: 64px 32px 32px; 
 `;
 
 export const AuthContainer = styled.View`
@@ -20,7 +20,6 @@ export const AuthContainer = styled.View`
 export const AuthTitle = styled(Text)`
   color: #333;
   text-transform: uppercase;
-  margin-top: 32px;
 `;
 
 export const AuthField = styled.TextInput`

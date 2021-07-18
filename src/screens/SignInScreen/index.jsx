@@ -31,8 +31,8 @@ export default SignInScreen = ({navigation}) => {
       </Main>
 
       <Auth>
-        <AuthContainer>
 
+        <AuthContainer>
           <AuthTitle small semi>Email Address</AuthTitle>
           <AuthField 
             autoCapitalize="none" 
@@ -43,7 +43,9 @@ export default SignInScreen = ({navigation}) => {
             onChangeText={email => setEmail(email.trim())}
             value={email}
           />
+        </AuthContainer>
           
+        <AuthContainer>
           <AuthTitle small semi>Password</AuthTitle>
           <AuthField  
             autoCapitalize="none" 
@@ -54,8 +56,8 @@ export default SignInScreen = ({navigation}) => {
             onChangeText={password => setPassword(password.trim())}
             value={password}
           />
-
         </AuthContainer>
+      
       </Auth>
 
       <SignInContainer disabled={loading}>
