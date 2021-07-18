@@ -43,6 +43,11 @@ export const SignUp = styled.TouchableOpacity`
   margin-top: 16px;
 `;
 
+export const Loading = styled.ActivityIndicator.attrs(props => ({
+  color: "#fff",
+  size: "small",
+}))``;
+
 export const Background = styled.ImageBackground`
   position: absolute;
   width: 100%;

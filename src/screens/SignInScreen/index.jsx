@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { 
   Container,
   Main,
@@ -8,6 +8,7 @@ import {
   AuthField,
   SignInContainer,
   SignUp,
+  Loading,
   Background,
   StatusBar,
 } from "./styles/SignInScreen";
@@ -15,7 +16,11 @@ import {
 import BgImage from '../../../assets/SignInBg.png'
 import { Text } from '../../components';
 
-export default SignInScreen = () => {
+export default SignInScreen = ({navigation}) => {
+  const [email, setEmail] = useState();
+  const [password, setPassword] = useState();
+  const [loading, setLoading] = useState(false);
+
   return (
     <Container>
       
@@ -33,8 +38,10 @@ export default SignInScreen = () => {
             autoCapitalize="none" 
             autoCompleteType="email" 
             autoCorrect={false} 
-            autoFocus={true}
+            autoFocus={false}
             keyboardType="email-address"
+            onChangeText={email => setEmail(email.trim())}
+            value={email}
           />
           
           <AuthTitle small semi>Password</AuthTitle>
@@ -42,20 +49,28 @@ export default SignInScreen = () => {
             autoCapitalize="none" 
             autoCompleteType="password" 
             autoCorrect={false} 
-            autoFocus={true}
+            autoFocus={false}
             secureTextEntry={true}
+            onChangeText={password => setPassword(password.trim())}
+            value={password}
           />
 
         </AuthContainer>
       </Auth>
 
-      <SignInContainer>
-        <Text center bold medium white>Sign In</Text>
+      <SignInContainer disabled={loading}>
+        {loading ? (
+          <Loading />
+        ) : (
+          <Text center bold medium white>
+            Sign In
+          </Text>
+        )}
       </SignInContainer>
 
-      <SignUp>
-        <Text medium center> New to Social?{' '} 
-          <Text violet medium>
+      <SignUp onPress={() => navigation.navigate('SignUp')}>
+        <Text center small> New to Social?{' '} 
+          <Text violet small>
             Sign Up
           </Text>
         </Text>
