@@ -6,7 +6,7 @@ export const Container = styled.View`
 `;
 
 export const Main = styled.View`
-  margin-top: 192px;
+  margin-top: 175px;
 `;
 
 export const Auth = styled.View`
