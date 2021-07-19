@@ -8,10 +8,12 @@ import {
 } from "./styles/LoadingScreen";
 
 import { UserContext } from '../../context/UserContext';
+import { FirebaseContext } from '../../context/FirebaseContext';
 import { Text } from '../../components';
 
 export default LoadingScreen = ({navigation}) => {
   const [_, setUser] = useContext(UserContext);
+  const firebase = useContext(FirebaseContext);
 
   useEffect(() => {
     setTimeout(async () => {
