@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useContext, useEffect } from 'react';
+import LottieView from 'lottie-react-native';
 import { 
   Container,
   Main,
@@ -6,21 +7,33 @@ import {
   StatusBar,
 } from "./styles/LoadingScreen";
 
-import BgImage from '../../../assets/SignInBg.png'
+import { UserContext } from '../../context/UserContext';
 import { Text } from '../../components';
 
 export default LoadingScreen = ({navigation}) => {
+  const [_, setUser] = useContext(UserContext);
+
+  useEffect(() => {
+    setTimeout(async () => {
+      setUser((state) => ({ ...state, isLoggedIn: false }));
+    }, 1500)
+  }, [])
+
   return (
     <Container>
       
       <Main>
-        <Text center title semi>
-          Loading Screen
+        <Text center title white>
+          Be Social
         </Text>
-      </Main>
 
-      <Background source={BgImage}>
-      </Background>
+        <LottieView 
+          source={require("../../../assets/loadingAnimation.json")}
+          autoPlay
+          loop
+          style={{ width: "50%"}}
+        />  
+      </Main>
       
       <StatusBar barStyle="light-content" />
     </Container>
