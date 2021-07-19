@@ -6,7 +6,7 @@ export const Container = styled.View`
 `;
 
 export const Main = styled.View`
-  margin-top: 160px;
+  margin-top: 140px;
 `;
 
 export const ProfilePhotoContainer = styled.TouchableOpacity`
