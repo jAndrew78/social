@@ -3,10 +3,39 @@ import { Text } from '../../../components';
 
 export const Container = styled.View`
   flex: 1;
+  align-items: center;
 `;
 
 export const Main = styled.View`
-  margin-top: 192px;
+  margin-top: 72px;
+`;
+
+export const ProfilePhotoContainer = styled.View`
+  shadow-opacity: .6;
+  shadow-radius: 10px;
+  shadow-color: #222;
+`;
+
+export const ProfilePhoto = styled.Image`
+  width: 128px;
+  height: 128px;
+  border-radius: 64px;
+`;
+
+export const StatsContainer = styled.View`
+  flex: 1;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 32px;
+`;
+
+export const StatContainer = styled.View`
+  align-items: center;
+  flex: 1;
+`;
+
+export const LogOut = styled.TouchableOpacity`
+  margin-bottom: 32px;
 `;
 
 export const Background = styled.ImageBackground`
