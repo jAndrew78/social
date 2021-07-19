@@ -17,9 +17,11 @@ export const ProfilePhotoContainer = styled.View`
 `;
 
 export const ProfilePhoto = styled.Image`
-  width: 128px;
-  height: 128px;
-  border-radius: 64px;
+  width: 256px;
+  height: 256px;
+  border-width: 3px;
+  border-color: #fff;
+  border-radius: 128px;
 `;
 
 export const StatsContainer = styled.View`

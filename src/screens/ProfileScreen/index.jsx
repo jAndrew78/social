@@ -20,6 +20,14 @@ export default ProfileScreen = ({navigation}) => {
   const [user, setUser] = useContext(UserContext);
   const firebase = useContext(FirebaseContext);
 
+  const logOut = async () => {
+    const loggedOut = await firebase.logOut();
+
+    if (loggedOut) {
+      setUser((state) => ({ ...state, isLoggedIn: false }));
+    }
+  };
+
   return (
     <Container>
       
@@ -68,9 +76,9 @@ export default ProfileScreen = ({navigation}) => {
         </StatContainer>
       </StatsContainer>
 
-      <LogOut>
+      <LogOut onPress={logOut}>
         <Text medium heavy violet>
-          Log out
+          Log Out
         </Text>
       </LogOut>
       
