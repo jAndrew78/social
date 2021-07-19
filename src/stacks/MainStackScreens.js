@@ -72,8 +72,8 @@ export default MainStackScreens = () => {
               color="#856088" 
               style={{
                 // flex: 1,
-                alignSelf: "center",
-                textAlignVertical: "center",
+                // alignSelf: "center",
+                // textAlignVertical: "center",
               }}  
             />
           // </View>
