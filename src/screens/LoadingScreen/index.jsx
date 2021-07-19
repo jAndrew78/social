@@ -17,7 +17,20 @@ export default LoadingScreen = ({navigation}) => {
 
   useEffect(() => {
     setTimeout(async () => {
-      setUser((state) => ({ ...state, isLoggedIn: false }));
+      const user = firebase.getCurrentUser();
+      if (user) {
+        const userInfo = await firebase.getUserInfo(user.uid);
+
+        setUser({
+          isLoggedIn: true,
+          email: userInfo.email,
+          uid: user.uid,
+          username: userInfo.username,
+          profilePhotoUrl: userInfo.profilePhotoUrl,
+        });
+      } else {
+        setUser((state) => ({ ...state, isLoggedIn: false }));
+      }
     }, 1500)
   }, [])
 
