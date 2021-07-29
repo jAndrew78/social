@@ -5,7 +5,9 @@
 Full Stack React Native / Firebase Social Chat App 
   - Front End
     - React Native
-    - Functional Components with Separate StyleSheets
+    - Custom Text Attributes
+    - Styled Components 
+    - Separate StyleSheets
     - Hooks and Context
   
   - Back End
