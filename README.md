@@ -18,4 +18,4 @@ Full Stack React Native / Firebase Social Chat App
 
 ![Preview](qr-code.png?raw=true)
 
-If you have Expo Go, you should be able to scan this code with your camera or QR scanner to preview the app, but I hear there may be issues (especially with IOS devices)
+If you have the Expo Go app on your mobile phone, you should be able to scan this code with your camera or QR scanner to preview the app
