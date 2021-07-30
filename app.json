@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "social",
-    "slug": "social",
+    "name": "Social-app",
+    "slug": "social-app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -27,6 +27,8 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "description": "Full Stack Social Chat Application built with React Native and Firebase. Styled Components, Custom Text Attributes, Hooks and Context. Firebase Auth and FireStore.",
+    "githubUrl": "https://github.com/jAndrew78/social-app"
   }
 }
